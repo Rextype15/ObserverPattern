@@ -9,6 +9,7 @@ public class StoreMonitorDisplay implements Observer, Displayable {
     private String awayTeam;
     private int homeGoals;
     private int awayGoals;
+    private List<Scorer> scorerList;
     private Subject scoresData;
 
     public StoreMonitorDisplay(Subject scoresData){
@@ -20,13 +21,24 @@ public class StoreMonitorDisplay implements Observer, Displayable {
         System.out.println("Latest score is:");
         System.out.println(homeTeam + " (HOME) " + homeGoals + " - "
                 + awayTeam + " (AWAY) " + awayGoals);
+        if(scorerList.Count > 0) {
+            System.out.println("Scorers are:");
+            for(Scorer scorer : scorerList) {
+              System.out.println("Name: " + scorer.Name);
+              System.out.println("Number: " + scorer.Number.ToString());
+              System.out.println("Position: " + scorer.Position);
+              System.out.pritnln("Team: " + scorer.Team);
+            }
+        }
+
     }
 
-    public void update(String home, String away, int homeGoals, int awayGoals) {
+    public void update(String home, String away, int homeGoals, int awayGoals, List<Scorer> scorerList) {
         this.homeTeam = home;
         this.awayTeam = away;
         this.homeGoals = homeGoals;
         this.awayGoals = awayGoals;
+        this.scorerList = scorerList;
         display();
     }
 
