@@ -4,7 +4,7 @@ import mx.iteso.observer.Displayable;
 import mx.iteso.observer.Observer;
 import mx.iteso.observer.Subject;
 
-public class StoreMonitorDisplay implements Observer, Displayable {
+public class MobileAppDisplay implements Observer, Displayable {
     private String homeTeam;
     private String awayTeam;
     private int homeGoals;
@@ -12,7 +12,7 @@ public class StoreMonitorDisplay implements Observer, Displayable {
     private List<Scorer> scorerList;
     private Subject scoresData;
 
-    public StoreMonitorDisplay(Subject scoresData){
+    public MobileAppDisplay(Subject scoresData){
         this.scoresData = scoresData;
         this.scoresData.registerObserver(this);
     }
