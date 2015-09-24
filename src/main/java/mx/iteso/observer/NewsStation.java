@@ -10,6 +10,8 @@ public class NewsStation {
         scoresData = new ScoresData();
 
         StoreMonitorDisplay storeMonitorDisplay = new StoreMonitorDisplay(scoresData);
+        MobileAppDisplay mobileAppDisplay = new MobileAppDisplay(scoresData);
+
         List<Scorer> tacitIntelScorerList = new List<Scorer>();
         List<Scorer> chivasQueretaroScorerList = new List<Scorer>();
         Lsit<ScorerList> gangaAmericaList = new List<Scorer>();
