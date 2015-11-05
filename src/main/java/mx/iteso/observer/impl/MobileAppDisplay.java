@@ -22,6 +22,7 @@ public class MobileAppDisplay implements Observer, Displayable {
     }
 
     public void display() {
+        System.out.println("Sent from Mobile App");
         System.out.println("Latest score is:");
         System.out.println(homeTeam + " (HOME) " + homeGoals + " - "
                 + awayTeam + " (AWAY) " + awayGoals);
