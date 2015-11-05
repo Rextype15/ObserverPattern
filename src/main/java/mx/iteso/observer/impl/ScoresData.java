@@ -12,7 +12,7 @@ public class ScoresData implements Subject {
     private int awayGoals;
     private String homeTeam;
     private String awayTeam;
-    private List<Scorer> scorerList;
+    private ArrayList<Scorer> scorerList;
 
     public ScoresData(){
         observers = new ArrayList<Observer>();
@@ -36,7 +36,7 @@ public class ScoresData implements Subject {
         notifyObservers();
     }
 
-    public void setScore( String homeTeam, String awayTeam, int homeGoals, int awayGoals, List<Scorer> scorerList){
+    public void setScore( String homeTeam, String awayTeam, int homeGoals, int awayGoals, ArrayList<Scorer> scorerList){
         this.homeTeam = homeTeam;
         this.awayTeam =  awayTeam;
         this.homeGoals = homeGoals;

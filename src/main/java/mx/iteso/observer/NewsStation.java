@@ -1,8 +1,12 @@
 package mx.iteso.observer;
 
+import mx.iteso.observer.impl.MobileAppDisplay;
 import mx.iteso.observer.impl.ScoresData;
 import mx.iteso.observer.impl.StoreMonitorDisplay;
 import mx.iteso.observer.Scorer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NewsStation {
     public static void main( String[] args ){
@@ -12,9 +16,9 @@ public class NewsStation {
         StoreMonitorDisplay storeMonitorDisplay = new StoreMonitorDisplay(scoresData);
         MobileAppDisplay mobileAppDisplay = new MobileAppDisplay(scoresData);
 
-        List<Scorer> tacitIntelScorerList = new List<Scorer>();
-        List<Scorer> chivasQueretaroScorerList = new List<Scorer>();
-        Lsit<ScorerList> gangaAmericaList = new List<Scorer>();
+        ArrayList<Scorer> tacitIntelScorerList = new ArrayList<Scorer>();
+        ArrayList<Scorer> chivasQueretaroScorerList = new ArrayList<Scorer>();
+        ArrayList<Scorer> gangaAmericaList = new ArrayList<Scorer>();
 
 
 
